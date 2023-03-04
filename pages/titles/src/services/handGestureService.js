@@ -1,4 +1,4 @@
-import { knowGestures, gestureStrings } from "../util/gestures.js"
+import { knowGestures } from "../util/gestures.js"
 
 export default class HandGestureService {
   #gestureEstimator
@@ -63,7 +63,7 @@ export default class HandGestureService {
 
       const { x, y } = hand.keypoints.find(keypoint => keypoint.name === 'index_finger_tip')
 
-      yield { event: result.name, x, y }
+      yield { event: result.name, x, y, score: result.score }
     }
   }
 

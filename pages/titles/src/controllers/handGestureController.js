@@ -1,6 +1,6 @@
 import { prepareRunChecker } from "../../../../lib/shared/util.js"
 
-const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 250 })
+const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 300 })
 
 export default class HandGestureController {
   #view
@@ -35,8 +35,8 @@ export default class HandGestureController {
   async #estimateHands() {
     try {
       const hands = await this.#service.estimateHands(this.#camera.video)
-      for await (const { event, x, y } of this.#service.detectGestures(hands)) {
-        if (event.includes("scroll")) {
+      for await (const { event, score, x, y } of this.#service.detectGestures(hands)) {
+        if (event.includes("scroll") && score >= 0.9) {
           if (!scrollShouldRun()) {
             continue
           }
