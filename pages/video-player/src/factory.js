@@ -4,7 +4,11 @@ import Controller from "./controller.js"
 import Service from "./service.js"
 import View from "./view.js"
 
-// const [rootPath] = window.location.href.split('/pages/');
+const [rootPath] = window.location.href.split('/pages/');
+
+const view = new View()
+
+view.setVideoSrc(`${rootPath}/assets/video.mp4`)
 
 async function getWorker() {
   if (suportsWorkerType()) {
@@ -54,7 +58,12 @@ const camera = await Camera.init()
 
 const factory = {
   async initialize() {
-    return Controller.initialize({ view: new View(), camera, worker })
+    return Controller.initialize({
+      view,
+      camera,
+      worker,
+      videoUrl: `${rootPath}/assets/video.mp4`
+    })
   }
 }
 
