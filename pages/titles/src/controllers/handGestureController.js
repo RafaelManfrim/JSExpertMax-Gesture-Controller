@@ -1,6 +1,6 @@
 import { prepareRunChecker } from "../../../../lib/shared/util.js"
 
-const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 200 })
+const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 250 })
 
 export default class HandGestureController {
   #view
