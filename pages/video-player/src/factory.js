@@ -8,7 +8,6 @@ const [rootPath] = window.location.href.split('/pages/');
 
 const view = new View()
 
-console.log(rootPath)
 view.setVideoSrc(`${rootPath}/assets/video.mp4`)
 
 async function getWorker() {
