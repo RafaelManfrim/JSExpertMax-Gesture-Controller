@@ -25,7 +25,7 @@ Marque esse projeto com uma estrela 🌟
   - [X] - Deve disparar scroll up quando usar a palma das mãos abertas 🖐
   - [X] - Deve disparar scroll down quando usar a palma das mãos fechadas ✊
   - [X] - Deve disparar click no elemento mais próximo quando usar  gesto de pinça 👌
-  - [] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
+  - [X] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
 
 - Video Player
   - [X] - Deve ser possivel de reproduzir ou pausar videos com o piscar de olhos 😁
