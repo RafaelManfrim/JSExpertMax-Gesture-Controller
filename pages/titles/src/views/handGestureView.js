@@ -3,7 +3,7 @@ export default class HandGestureView {
     requestAnimationFrame(fn)
   }
 
-  scrollPage() {
+  scrollPage(top) {
     scroll({
       top,
       behavior: "smooth"
