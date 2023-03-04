@@ -50,13 +50,11 @@ export default class HandGestureController {
             continue
           }
 
-          console.log({ event, score, x, y })
-
           this.#view.clickOnElement(x, y)
           continue
         }
 
-        if (event.includes("scroll") && score >= 0.9) {
+        if (event.includes("scroll") && score >= 0.9 && hands.length === 2) {
           if (!scrollShouldRun()) {
             continue
           }

@@ -66,8 +66,6 @@ export default class HandGestureView {
   clickOnElement(x, y) {
     const element = document.elementFromPoint(x, y)
 
-    console.log({ element })
-
     if (!element) {
       return
     }
